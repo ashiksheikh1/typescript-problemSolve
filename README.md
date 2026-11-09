@@ -29,16 +29,6 @@ generics, asynchronous programming, and Object-Oriented Programming
 ├── type-vs-interface.md
 ├── type-narrowing.md
 └── README.md
-```
-
-## Blog Posts
-
-Two separate blog posts are included in this repository:
-
-1.  [Type Aliases vs Interfaces in
-    TypeScript](https://github.com/KanizSanjila/TypeScript-1/blob/main/type-vs-interface.md)
-2.  [Type Narrowing in
-    TypeScript](https://github.com/KanizSanjila/TypeScript-1/blob/main/type-narrowing.md)
 
 ## Technologies Used
 
