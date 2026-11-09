@@ -1,4 +1,3 @@
-// Problem 1:...........
 
 const multiplyValue =(value: number, multiplier?: number) =>{
 if(value && multiplier){
@@ -10,11 +9,6 @@ const result = value * 2
  console.log(result)
 }
 }
-// multiplyValue(10);
-// multiplyValue(10, 5);
-// multiplyValue(7, 0);
-
-// Problem 2:...........
 
 const processInput=(input: string | number | boolean):string | number=>{
 if(typeof input === "string"){
@@ -33,41 +27,20 @@ else {
   return result
 }
 
-// else if(typeof input === "true"){
-//     const result= "Active";
-//     console.log(result)
-// }
-// else if(typeof input === "false"){
-//     const result= "Active";
-//     console.log(result)
-// }
 }
 
-// processInput("  TypeScript  ");
-// processInput(7);
-// processInput(true);
-// processInput(false);
 
-
-// Problem 3:..........
 function formatCoordinate(coordinate: readonly [number, number, string]): string {
   const [latitude, longitude, locationName] = coordinate;
 
   return `Location: ${locationName} (${latitude}, ${longitude})`;
 }
 
-// console.log(formatCoordinate([23.81, 90.41, "Dhaka"]));
-// console.log(formatCoordinate([22.35, 91.78, "Chittagong"]));
 
-// problem- 4.............
 function concatenateArrays <T>(...arrays: T[][]) :T[]{
  return arrays.flat();
 }
 
-// console.log(concatenateArrays(["a", "b"], ["c", "d"]))
-
-
-// problem-5............
 
 interface Course {
   title: string;
@@ -83,7 +56,7 @@ const getPopularCourses = (courses: Course[],minStudents: number): Course[] => {
   );
 };
 
-// Sample Input
+
 const courses: Course[] = [
   { title: "TypeScript Mastery", students: 120, isPublished: true },
   { title: "Draft Course", students: 200, isPublished: true },
@@ -91,9 +64,7 @@ const courses: Course[] = [
   { title: "Next.js Pro", students: 85, isPublished: true }
 ];
 
-// const result = getPopularCourses(courses, 100);
 
-//  problem-6.........
 
 function pluckValues<T, K extends keyof T>(items: T[], key: K): T[K][] {
   return items.map((item) => item[key]);
@@ -105,17 +76,6 @@ const users = [
   { id: 2, name: "Sadia", role: "Editor" },
   { id: 3, name: "ashik", role: "Subscriber" }
 ];
-
-const names = pluckValues(users, "name");
-const ids = pluckValues(users, "id");
-const roles = pluckValues(users, "role");
-
-console.log(names);
-console.log(ids);
-console.log(roles);
-
-
-// problem-7.......
 
 class Employee {
   protected name: string;
@@ -148,15 +108,6 @@ class Manager extends Employee {
   }
 }
 
-// Sample Input:
-const manager = new Manager("Alice", 50000, "Engineering");
-// console.log(manager.getDetails())
-// console.log(manager.getRoleInfo())
-
-
-// problem-8
-
-
 const validateAgeAsync = (age: number): Promise<string> => {
   return new Promise((resolve, reject) => {
     if (age < 18) {
@@ -168,14 +119,3 @@ const validateAgeAsync = (age: number): Promise<string> => {
     }
   });
 };
-
-// console.log(validateAgeAsync(10))
-
-// Sample Output 1 (resolves after 1 second):
-// "Access Granted"
-
-// Sample Input 2:
-// console.log(validateAgeAsync(35))
-
-// Sample Output 2 (rejects with Error):
-// Error: Access Denied: Must be 18 or older
